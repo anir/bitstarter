@@ -3,7 +3,7 @@ var fs = require('fs');
 var app = express.createServer(express.logger());
 app.get('/', function(request, response) {
        var file="index.html";
-	   var temp= fs.readSync(file);
+	   var temp= fs.readFileSync(file);
 	   response.send('hello parallel worlds!!');
 });
 var port = process.env.PORT || 5000;
