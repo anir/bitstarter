@@ -4,7 +4,7 @@ var app = express.createServer(express.logger());
 app.get('/', function(request, response) {
        var file="index.html";
 	   var temp= fs.readFileSync(file);
-	   response.send('hello parallel worlds!!');
+	   response.send(temp.toString('utf-8'));
 });
 var port = process.env.PORT || 5000;
 app.listen(port, function() {
